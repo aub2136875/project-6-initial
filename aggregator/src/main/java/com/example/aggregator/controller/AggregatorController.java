@@ -36,13 +36,8 @@ public class AggregatorController {
         return aggregatorService.getDefinitionFor(word);
     }
 
-    @GetMapping("/getAllPalindromes")
-    public List <Entry> getAllPalindromes() {
-        return aggregatorService.getAllPalindromes();
-    }
-
-    @GetMapping("/getWordsThatContainSuccessiveLettersAndStarsWith/{chars}")
-    public List<Entry> getWordsThatContainSuccessiveLettersAndStarsWith(@PathVariable String chars) {
+    @GetMapping("/getWordsThatContainSuccessiveLettersAndStartsWith/{chars}")
+    public List<Entry> getWordsThatContainSuccessiveLettersAndStartsWith(@PathVariable String chars) {
 
         StopWatch stopWatch = new StopWatch();
 
@@ -90,4 +85,10 @@ public class AggregatorController {
         return entries;
 
     }
+
+    @GetMapping("/getAllPalindromes")
+    public List <Entry> getAllPalindromes() {
+        return aggregatorService.getAllPalindromes();
+    }
+
 }

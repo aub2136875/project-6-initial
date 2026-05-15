@@ -54,6 +54,7 @@ public class AggregatorService {
                 .forEach(c -> {
 
                     // get words starting and ending with character
+                    // get words starting and ending with character
                     List<Entry> startsWith = restClient.getWordsStartingWith(c);
                     List<Entry> endsWith = restClient.getWordsEndingWith(c);
 
